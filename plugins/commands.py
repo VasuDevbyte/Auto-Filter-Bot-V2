@@ -12,7 +12,7 @@ from script import script
 async def start(client, message):
     try:
         await message.reply_text(
-            text=script.START_MSG.format(message.from_user.mention),
+            text=script.ST.format(message.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -31,7 +31,7 @@ async def start(client, message):
     except:
         pass
 
-@Client.on_message(filters.command(["help"]) & filters.private)
+@Client.on_message(filters.command(["elp"]) & filters.private)
 async def help(client, message):
     try:
         await message.reply_text(
@@ -54,7 +54,7 @@ async def help(client, message):
     except:
         pass
 
-@Client.on_message(filters.command(["about"]) & filters.private)
+@Client.on_message(filters.command(["abo"]) & filters.private)
 async def about(client, message):
     try:
         await message.reply_text(
